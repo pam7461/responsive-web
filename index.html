@@ -33,19 +33,39 @@
             background:#2ecc71;
             display:flex;
             flex-flow:row wrap;
+            position:relative;
         }
         .header .logo{
-            width:calc(100% - 30px);
             order:2;
+            width:100%;
+            padding:28px 0;            
+            text-align:center;
+            font-weight:700;
+            font-size:1.2em;
         }
-        .header .btn-nav{
-            order:3;
+        .header .btn-nav{            
             width:30px;
             height:30px;
+            position:absolute;
+            right:10px;
+            top:63px;
         }
         .header .nav{
             order:4;
             width:100%;
+            padding:1em;
+            background:#2c3e50;
+        }
+        .header .nav ul{
+            display:flex;
+            flex-flow:row wrap;
+        }
+        .header .nav ul li{
+            width:100%;
+            margin-bottom:36px;
+        }
+        .header .nav ul li:last-child{
+            margin-bottom:0;
         }
         .header .q-nav{
             order:1;
@@ -87,16 +107,24 @@
             .header{
                 order:1;
                 position:relative;
+                height:132px;
             }
             .header .logo{
                 position:absolute;
                 left:0;
-                top:0;
+                top:53px;
+                width:120px;
+                background:#2ecc71;
+            }
+            .header .btn-nav{
+                right:30px;
+                top:76px;
             }
             .header .nav{
                 position:absolute;
                 right:0;
                 top:100%;
+                width:40%;
             }
             .slider{
                 width:60%;
@@ -132,14 +160,33 @@
         }
 
         @media (min-width:1200px){ 
+            .header{
+                height:auto;
+            }
+            .header .logo{
+                top:0;
+            }
             .header .btn-nav{
                 display:none;
             }           
             .header .nav{
                 order:1;
+                position:static;
+                width:83%;
+                padding:0;
+                background:transparent;
+            }
+            .header .nav ul{
+                justify-content:center;
+                padding-top:18px;
+            }
+            .header .nav ul li{
+                width:auto;
+                margin:0 1.5em;                
             }
             .header .q-nav{
                 order:2;
+                width:17%;
             }
             .slider{
                 width:50%;
@@ -178,8 +225,15 @@
     <section class="wrapper">
         <header class="header item">
             <h1 class="logo">FLAT<br>DESIGN</h1>
-            <div class="btn-nav">네비버튼</div>
-            <nav class="nav">네비게이션</nav>
+            <div class="btn-nav"><img src="./images/ico-nav.png" alt="navbutton"></div>
+            <nav class="nav">
+                <ul>
+                    <li>홈</li>
+                    <li>플랫 디자인이란?</li>
+                    <li>갤러리</li>
+                    <li>문의사항</li>
+                </ul>
+            </nav>
             <div class="q-nav">
                 <div class="img-box"><img src="./images/ico-info01.png" alt="홈"></div>
                 <div class="img-box"><img src="./images/ico-info02.png" alt="홈"></div>
