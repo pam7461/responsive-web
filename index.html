@@ -7,14 +7,116 @@
     <link rel="stylesheet" href="./css/reset.css">
     <title>Responsive Web</title>
     <style>
+        /* 기본스타일 / 모바일우선 */
         @font-face {
             font-family:'NanumGothic';
             src: url(./fonts/NanumGothic.ttf);
         }
+        :root{
+            font-family:'NanumGothic';
+            font-weight:500;
+            font-size:16px;
+            /* color:#fff; */
+            line-height:1.2;
+        }
+        .wrapper{
+            width:83.33333333333333%;
+            max-width:960px;
+            margin:0 auto; 
+            display:flex;
+            flex-flow:row wrap;
+        }
+
+        .header{
+            width:100%;
+            background:red;
+        }
+        .slider{
+            width:100%;
+            background:green;
+        }
+        .latest{
+            width:100%;
+            background:blue;
+        }
+        .popular{
+            width:100%;
+            background:cyan;
+        }
+        .gallery{
+            width:100%;
+            background:magenta;
+        }
+        .rankup{
+            width:100%;
+            background:yellow;
+        }
+        .banner{
+            width:100%;
+            background:lightcoral;
+        }
+        .social{
+            width:100%;
+            background:lavender;
+        }
+        .footer{
+            width:100%;
+            background:lawngreen;
+        }
+
+
+
+        @media (min-width:960px){
+            .header{
+                order:1;
+            }
+            .slider{
+                width:60%;
+                order:2;
+            }
+            .latest{
+                width:42%;
+                order:4;
+            }
+            .popular{
+                width:42%;
+                order:5;
+            }
+            .gallery{
+                width:71.61458333333333%;
+                order:7;
+            }
+            .rankup{
+                width:40%;
+                order:3;
+            }
+            .banner{
+                width:28.38541666666667%;
+                order:8;
+            }
+            .social{
+                width:16%;
+                order:6;
+            }
+            .footer{
+                order:9;
+            }
+        }
+
     </style>
 </head>
 <body>
-    
+    <section class="wrapper">
+        <header class="header">헤더</header>
+        <section class="sec sec01 slider">슬라이더</section>
+        <section class="sec sec02 latest">최신글</section>
+        <section class="sec sec03 popular">인기글</section>
+        <section class="sec sec04 gallery">갤러리</section>
+        <section class="sec sec05 rankup">랭크</section>
+        <section class="sec sec06 banner">베너</section>
+        <section class="sec sec07 social">쇼셜</section>
+        <footer class="footer">푸터</footer>
+    </section>
 
     <script src="./js/jquery.min.js"></script>
 </body>
