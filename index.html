@@ -50,6 +50,7 @@
             position:absolute;
             right:10px;
             top:63px;
+            cursor:pointer;
         }
         .header .nav{
             display:none;
@@ -172,7 +173,7 @@
                 display:none;
             }           
             .header .nav{
-                display:block;
+                display:block !important;
                 order:1;
                 position:static;
                 width:83%;
@@ -226,8 +227,8 @@
     <section class="wrapper">
         <header class="header item">
             <h1 class="logo">FLAT<br>DESIGN</h1>
-            <div class="btn-nav"><img src="./images/ico-nav.png" alt="navbutton"></div>
-            <nav class="nav">
+            <div class="btn-nav" id="btn-nav"><img src="./images/ico-nav.png" alt="navbutton"></div>
+            <nav class="nav" id="nav">
                 <ul>
                     <li>홈</li>
                     <li>플랫 디자인이란?</li>
@@ -253,5 +254,10 @@
     </section>
 
     <script src="./js/jquery.min.js"></script>
+    <script>
+        $('#btn-nav').click(function(){
+            $('#nav').slideToggle();
+        })
+    </script>
 </body>
 </html>
