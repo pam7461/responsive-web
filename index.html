@@ -80,7 +80,26 @@
             justify-content:space-around;
         }
         .slider{
-            background:#8271fe;
+            height:300px;
+            background:url(./images/slider01.jpg) no-repeat center;
+        }       
+        .notice{
+            padding:36px 24px;
+        }
+        .notice h2{
+            margin-bottom:1em;
+            font-weight:700;
+            font-size:1.4em;
+            text-align:center;
+        }
+        .notice li{
+            margin-bottom:1em;
+            text-wrap:nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis;
+        }
+        .notice li:last-child{
+            margin-bottom:0;
         }
         .latest{
             background:#ffc40f;
@@ -89,7 +108,18 @@
             background:#a660c2;
         }
         .gallery{
+            padding:50px 40px;
             background:#e65d5d;
+            display:flex;
+            flex-flow:row wrap;
+            justify-content:space-between;
+        }
+        .gallery article{
+            width:100%;
+            margin-bottom:4em;
+        }
+        .gallery article:last-child{
+            margin-bottom:0;
         }
         .rankup{
             background:#219af7;
@@ -144,6 +174,14 @@
             .gallery{
                 width:71.61458333333333%;
                 order:7;
+            }
+            .gallery article{
+                width:calc(50% - 2em);
+                margin-bottom:0;
+                margin-right:4em;
+            }
+            .gallery article:last-child{
+                margin-right:0;
             }
             .rankup{
                 width:40%;
@@ -206,7 +244,16 @@
             }
             .gallery{
                 width:27%;
+                padding:50px;
                 order:3;
+            }
+            .gallery article{
+                width:100%;
+                margin-bottom:4em;
+                margin-right:0;
+            }
+            .gallery article:last-child{
+                margin-bottom:0;
             }
             .rankup{
                 width:23%;
@@ -243,10 +290,38 @@
                 <div class="img-box"><img src="./images/ico-info04.png" alt="홈"></div>
             </div>
         </header>
-        <section class="sec sec01 slider item">슬라이더</section>
-        <section class="sec sec02 latest item">최신글</section>
-        <section class="sec sec03 popular item">인기글</section>
-        <section class="sec sec04 gallery item">갤러리</section>
+        <section class="sec sec01 slider item">
+        </section>
+        <section class="sec sec02 latest item notice">
+            <h2>최신글</h2>
+            <ul>
+                <li>안녕하세요. 홈페이지가 오픈되었습니다.</li>
+                <li>홈페이지 리뉴얼 일정 안내</li>
+                <li>FLAT DESIGN은 새로운 디자인 페러가임 입니다.</li>
+                <li>BLOG에서 다양한 정보를 확인하세요.</li>
+                <li>저는 누굴까요?</li>
+            </ul>
+        </section>
+        <section class="sec sec03 popular item notice">
+            <h2>인기글</h2>
+            <ul>
+                <li>안녕하세요. 홈페이지가 오픈되었습니다.</li>
+                <li>홈페이지 리뉴얼 일정 안내</li>
+                <li>FLAT DESIGN은 새로운 디자인 페러가임 입니다.</li>
+                <li>BLOG에서 다양한 정보를 확인하세요.</li>
+                <li>저는 누굴까요?</li>
+            </ul>
+        </section>
+        <section class="sec sec04 gallery item">
+            <article>
+                <div class="img-box"><img src="./images/gallery01.jpg" alt="gall01"></div>
+                <h2>디자인 트렌드 플랫</h2>
+            </article>
+            <article>
+                <div class="img-box"><img src="./images/gallery02.jpg" alt="gall02"></div>
+                <h2>원색이 포인트 플랫</h2>
+            </article>
+        </section>
         <section class="sec sec05 rankup item">랭크</section>
         <section class="sec sec06 banner item">베너</section>
         <section class="sec sec07 social item">쇼셜</section>
